@@ -1,0 +1,10 @@
+@EventTarget
+	public void onTick(ClientTickEvent event) {
+		RainbowGlint.INSTANCE.hue += 0.02;
+
+		RainbowGlint.INSTANCE.chromaColor = Color.getHSBColor(RainbowGlint.INSTANCE.hue, 0.69F, 0.8F);
+
+		if(RainbowGlint.INSTANCE.hue > 1) {
+			RainbowGlint.INSTANCE.hue = 0;
+		}
+	}
